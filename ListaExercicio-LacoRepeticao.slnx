@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Fatorial/Fatorial.csproj" />
+  <Project Path="Fibonacci/Fibonacci.csproj" />
+  <Project Path="ListaExercicio-LacoRepeticao/Tabuada.csproj" />
+  <Project Path="ParImpar/ParImpar.csproj" />
+  <Project Path="Primo/Primo.csproj" />
+</Solution>
