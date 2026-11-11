@@ -8,8 +8,10 @@ numero = int.Parse(Console.ReadLine());
 int contador;
 
 Console.WriteLine("Sequencia: ");
-for (int i = 2; i <= numero; i++){
+
+for (int i = 2; i <= numero; i++){ 
     contador = 0;
+
     for (int j = i; j>=2; j--)
     {
         if (i % j == 0)
@@ -21,6 +23,7 @@ for (int i = 2; i <= numero; i++){
             break;
         }
     }
+
     if (contador <= 1)
     {
         Console.WriteLine(i);
