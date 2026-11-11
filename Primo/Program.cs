@@ -1,31 +1,32 @@
 ﻿// 4 - Faça um programa que leia um numero inteiro e mostre todos os numero primos até ele, inclusive ele se for primo.
 
-int numero;
+bool EhPrimo(int numero)
+{
+    if (numero <= 1) return false;
 
-Console.WriteLine("Digite um numero: ");
-numero = int.Parse(Console.ReadLine());
-
-int contador;
-
-Console.WriteLine("Sequencia: ");
-
-for (int i = 2; i <= numero; i++){ 
-    contador = 0;
-
-    for (int j = i; j>=2; j--)
+    for (int i = 2; i < numero; i++)
     {
-        if (i % j == 0)
-        {
-            contador++;
-        }
-        if (contador > 1)
-        {
-            break;
-        }
+        if (numero % i == 0) return false;
     }
+    return true;
+}
 
-    if (contador <= 1)
+void ImprimePrimos(int numero)
+{
+    Console.WriteLine("Sequencia de primos");
+    if (numero <= 1)
     {
-        Console.WriteLine(i);
+        Console.WriteLine("Não tem Numeros primos na sequencia :C");
+    }
+    else
+    {
+        for (int i = 1; i <= numero; i++)
+        {
+            if (EhPrimo(i)) { Console.WriteLine(i); }
+        }
     }
 }
+
+Console.WriteLine("Digite seu numero:");
+ImprimePrimos(int.Parse(Console.ReadLine()));
+
