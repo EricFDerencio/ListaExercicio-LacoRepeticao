@@ -20,7 +20,7 @@ void ImprimePrimos(int numero)
     }
     else
     {
-        for (int i = 1; i <= numero; i++)
+        for (int i = 2; i <= numero; i++)
         {
             if (EhPrimo(i)) { Console.WriteLine(i); }
         }
